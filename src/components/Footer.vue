@@ -1,17 +1,20 @@
 <script>
     export default {
-        name:"TodoFooter"
+        name:"TodoFooter",
+        props: {
+          remaining: Number,
+  }
     }
 
 </script>
 <template>
   <footer class="footer">
-    <span class="todo-count">
-      <strong>3</strong>
-      <span>items</span>
+    <span class="todo-count" v-show="remaining">
+      <strong>{{ remaining }}</strong>
+      <span>{{ remaining===1? "item" : "items"}}</span>
     </span>
     <span class="slogan">Just do it</span>
-    <button class="clear-completed">Clear ompleted</button>
+    <!-- <button class="clear-completed">Clear ompleted</button> -->
   </footer>
 </template>
 
@@ -50,6 +53,7 @@ footer:before {
   margin: 0 50px;
   padding: 0;
   font-weight: 600;
+  float:right;
 }
 
 .clear-completed,

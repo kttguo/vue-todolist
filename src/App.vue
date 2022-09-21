@@ -8,8 +8,9 @@
         @delete-todo="removeTodo"
         @changeall-state="completedALL"
       />
-      <todo-footer></todo-footer>
+      <todo-footer :remaining="filterTodo.length"></todo-footer>
     </div>
+    
   </section>
 </template>
 

@@ -217,12 +217,7 @@ export default {
   color: #c18585;
 }
 
-/* .todo-list li .destroy:after {
-  content: "×";
-  display: block;
-  height: 100%;
-  line-height: 1.1;
-} */
+/*  */
 
 .todo-list li:hover .destroy {
   display: block;
